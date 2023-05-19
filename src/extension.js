@@ -210,11 +210,12 @@ function stopbutton(){
    console.log("END: ",end)
    work=(end-starut)*0.001 
    console.log("WORK", work)
+   console.log("Weekly Done Before null is ",weeklydone[da])
    if(weeklydone[da]=='null' || weeklydone[da]==undefined){
     weeklydone[da]=0
    }
-   tc=weeklydone[da]
-   weeklydone[da]=work+tc
+   const weekdo = JSON.parse(localStorage.getItem('weeklydone'))
+   weeklydone[da]=work + weekdo[da]
    localStorage.setItem('weeklydone', JSON.stringify(weeklydone))
    percent()
    workt=work
