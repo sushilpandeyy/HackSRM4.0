@@ -20,6 +20,19 @@
           </div>
 
     </header>
+
+    <div class="mainContainer">
+      <div class="container activeTab">
+        <div class="minActiveTab">
+          <h1>Active Tab</h1>
+        </div>
+
+        <br />
+        <ul id="feat">
+        </ul>
+      </div>
+    </div>
+  
 <div id="addtaskboxhere"></div>
 <div id="addtaskbox">
     <div class="mainContainer">
@@ -51,36 +64,10 @@
     </div>
 </div>
 
-    <div class="mainContainer">
-      <div class="container activeTab">
-        <div class="minActiveTab">
-          <h1>Active Tab</h1>
-        </div>
-
-        <br />
-        <p class="names">Title</p>
-        <br />
-
-        <div class="todayUsed-PlayPause">
-          <p class="names">Used</p>
-
-          <a href="" class="playPause"><img src="res/pause.png" alt="" /></a>
-        </div>
-      </div>
-    </div>
-
+    
 
     <div class="mainContainer">
       <ul class="list" id="tasklist">
-        <li>
-          <div class="container tastPanel">
-            <div class="taskPanelTop">
-             <span class="names">Task Name</span>
-              
-            </div>
-            <span>Date : </span>
-          </div>
-        </li>
       </ul>
     </div>
 
@@ -90,11 +77,11 @@
         <div class="mainFeatures">
           <div class="features">
             <li class="items">
-              <a href=""><img src="res/graph.png" alt=""></a>
+              <img src="res/graph.png" id="streakopen">
             </li>
   
             <li class="items">
-              <a href=""><img src="res/crosshair.png" alt=""></a>
+              <img src="res/crosshair.png" id="focus">
             </li>
   
             <li class="items">
@@ -110,6 +97,7 @@
   
     </footer>
   </div>
-        <script src="extension.js"></script>
+
   </body>
+  <script src="extension.js"></script>
 </html>
