@@ -75,19 +75,15 @@ function buttonstatus(){                               //STATUS FOR BUTTON VISIB
   hidden=JSON.parse(localStorage.getItem('hidden'))
   if(hidden==1){
     var stopbutton = document.getElementById('actoff');
-    stopbutton.classList.remove('hidden')
-    stopbutton.classList.add('normal')
+    stopbutton.style.display = "block"
     var startbutton = document.getElementById('act');
-    startbutton.classList.remove('normal')
-    startbutton.classList.add('hidden')
+    startbutton.style.display="none"
   }
   else if(hidden==0){
     var stopbutton = document.getElementById('actoff');
-    stopbutton.classList.remove('normal')
-    stopbutton.classList.add('hidden')
+    stopbutton.style.display = "none"
     var startbutton = document.getElementById('act');
-    startbutton.classList.remove('hidden')
-    startbutton.classList.add('normal')
+    startbutton.style.display="block"
   }
 }
 function savedata(){                       //SAVING DATA
@@ -168,8 +164,6 @@ function tak(){
           listfeat += `
           <li>
             <h3>${tt[a]}</h3><p>${time[a]}</p><p>${occ[a]}</p><br><p>Time Spent: ${Math.floor(user[a]/60)} mins</p>
-            <center><button class="normal" id="act">START</button></center>
-            <center><button class="hidden" id="actoff">STOP</button></center>
            </li> 
             `   
           document.getElementById("feat").innerHTML=listfeat
@@ -177,7 +171,8 @@ function tak(){
   }}) 
 //ADDING TIMER VIA START BUTTON
 const inputBtn = document.querySelector('button[id="act"]');
-inputBtn.addEventListener("click",function startclicked(){                //START BUTTON CLICKED
+inputBtn.addEventListener("click",function startclicked(){
+                                           //START BUTTON CLICKED
   start=Date.now();
   console.log("TIME : ",start)
   hidden=1
@@ -198,6 +193,7 @@ stopbtn.addEventListener("click",function(){
   localStorage.setItem('hidden', JSON.stringify(hidden));
   setstartup()
 })
+
 function setstartup(){
 chrome.storage.local.get("start", function(result) { //Function TO GET DATA
   starut = result.start;
