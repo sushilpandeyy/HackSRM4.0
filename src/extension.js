@@ -201,20 +201,22 @@ chrome.storage.local.get("start", function(result) { //Function TO GET DATA
  });
 }
 function stopbutton(){
-  redirect=0
-  chrome.storage.local.set({redirect}, function() {  //turn off redirect
-  });
+ // redirect=0
+ // chrome.storage.local.set({redirect}, function() {  //turn off redirect
+ // });
    end=0
    console.log("STOPBUTTON DATA ",starut)
    end=Date.now();
    console.log("END: ",end)
    work=(end-starut)*0.001 
    console.log("WORK", work)
-   if(weeklydone[da]=='null' || weeklydone[da]=="undefined"){
+   if(weeklydone[da]=='null' || weeklydone[da]==undefined){
     weeklydone[da]=0
    }
-   weeklydone[da]=weeklydone[da]+work
+   tc=weeklydone[da]
+   weeklydone[da]=work+tc
    localStorage.setItem('weeklydone', JSON.stringify(weeklydone))
+   percent()
    workt=work
    chrome.storage.local.set({work}, function(){})       //SAVED TOTAL WORK 
    changestart()
@@ -264,11 +266,20 @@ focusbutton.addEventListener("click",function startclicked(){
     }
     });
 })
-percent()
+
 function percent(){
   per=[]
+  const per_weekdone = JSON.parse(localStorage.getItem('weeklydone'))
   for(a=0; a<7; a++){
-    per[a]=(weeklydone[a]/weeklyexp[a])*100
+    if(per_weekdone[a]==undefined || per_weekdone[a]==null){
+        per_weekdone[a]=0
+    }
+    if(weeklyexp[a]==undefined || weeklyexp[a]==null){
+        weeklydexp[a]=0
+    }
+    console.log(per_weekdone[a])
+    per[a]=(per_weekdone[a]/weeklyexp[a])*100
+    console.log("percentage ",per[a])
   }
   localStorage.setItem('percentage', JSON.stringify(per));
   console.log("Percentage Calculated ")
