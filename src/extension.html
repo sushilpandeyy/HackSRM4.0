@@ -26,26 +26,27 @@
       <div class="container">
         <div class="title">
           <p class="names">Title:</p>
-          <input type="text" placeholder="Title of task*" />
+          <input type="text" id="title" placeholder="Title of task*" />
         </div>
 
         <div class="link">
           <p class="names">Link:</p>
-          <input type="text" placeholder="Link of work" />
+          <input type="text" id="link" placeholder="Link of work" />
         </div>
 
         <div class="TimeInterval">
           <p class="names">Time Interval:</p>
-          <input type="time" />
+          <select id="select"><option value="900">15 Mins</option>
+            <option value="1800">30 Mins</option><option value="2700">45 Mins</option><option value="3600">1 Hrs</option>
+            <option value="10800">3 Hrs</option><option value="21600">6 Hrs</option></select>
         </div>
 
         <div class="Occurance">
-          <p class="names">Occurance:</p>
-          <input type="text" name="" id="" placeholder=""/>
+          <p class="names">Repeat:</p>
+          <select id="select2"><option value="daily">Daily</option><option value="Weekly">Weekly</option></select>
         </div>
 
-        <button class="primaryButton">Add Task</button>
-        <button class="primaryButton">Reset</button>
+        <button class="primaryButton" id="save">Add Task</button>
       </div>
     </div>
 </div>
@@ -70,7 +71,7 @@
 
 
     <div class="mainContainer">
-      <ul class="list">
+      <ul class="list" id="tasklist">
         <li>
           <div class="container tastPanel">
             <div class="taskPanelTop">
@@ -83,42 +84,6 @@
       </ul>
     </div>
 
-    <div class="mainContainer">
-
-      <div class="streakContainer">
-
-        <div class="coinContainer">
-          <img src="res/dollar.png" alt="">
-          <span>10</span>
-      </div>
-
-        <div class="streakMain">
-          <h1>3</h1>
-        </div>
-  
-        <div class="noOfDays">
-          <div class="weekDays">S</div>
-          <div class="weekDays">M</div>
-          <div class="weekDays">T</div>
-          <div class="weekDays">W</div>
-          <div class="weekDays">T</div>
-          <div class="weekDays">F</div>
-          <div class="weekDays">S</div>
-        </div>
-  
-        <div class="descBox">
-          <span>You have worked for N hours</span>
-          <br />
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quae
-            maxime repudiandae quidem, nostrum rem, magni, ipsa minus optio
-            aliquid reprehenderit beatae similique.
-          </p>
-        </div>
-      </div>
-
-    </div>
 <div id="bottom">
     <footer>
       <nav class="navbar">
