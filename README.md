@@ -27,6 +27,7 @@ Technologies Uses :
 
 
 Have a look on the  installation Process :
+
 Download the src file :
 ![Screenshot (87)](https://github.com/sushilpandeyy/HackSRM4.0/assets/116885079/083d927d-5a0e-4a07-aaca-deb3b58f80b1)
 
@@ -54,4 +55,4 @@ The Extension is loaded sucessfully :
 ![Screenshot (91)](https://github.com/sushilpandeyy/HackSRM4.0/assets/116885079/51e6fc11-ce0d-4a56-b46b-8d0843d02e06)
 
 
-With DISSTRACT, you can say goodbye to distractions and hello to maximum productivity.
+With DISS-TRACT, you can say goodbye to distractions and hello to maximum productivity.
