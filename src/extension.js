@@ -26,7 +26,7 @@ else{
     localStorage.setItem('totalwork', JSON.stringify(totalwork))
 }
 weeklyexp=[0,0,0,0,0,0,0]
-weeklydone=[]
+weeklydone=[0,0,0,0,0,0,0]
 getobdata()
 getweeklydone()
 function getobdata(){
@@ -168,8 +168,8 @@ function tak(){
       link.value = currentdomain                    //UPDATING IN THE INPUT BOX
       console.log(currentdomain)
       let listfeat = ""
-      console.log("Links ",links[a])
       for(a=0; a<currenttask; a++){
+        console.log("Links ",links[a])
         if(links[a]==currentdomain){
             taskid=a
           listfeat += `
@@ -228,7 +228,10 @@ function stopbutton(){
     weeklydone[da]=0
    }
    const weekdo = JSON.parse(localStorage.getItem('weeklydone'))
-   weeklydone[da]=work + weekdo[da]
+   if(weeklydone[da]===undefined || weeklydone[da]===null){
+    weeklydone[da]=0
+   }
+   weeklydone[da]=work + weeklydone[da]
    localStorage.setItem('weeklydone', JSON.stringify(weeklydone))
    percent()
    workt=work
@@ -294,7 +297,6 @@ function percent(){
     }
     console.log(per_weekdone[a])
     per[a]=(per_weekdone[a]/weeklyexp[a])*100
-    console.log("percentage ",per[a])
   }
   localStorage.setItem('percentage', JSON.stringify(per));
   console.log("Percentage Calculated ")
