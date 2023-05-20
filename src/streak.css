@@ -72,13 +72,13 @@
     color: rgb(20, 35, 101);
     font-family: "Alata", sans-serif;
     font-weight: 600;
-    height: 200px;
+    height: 100px;
     font-size: 12px;
 }
 
 .coinContainer {
     height: 30px;
-    width: 60px;
+    width: 80px;
     background-color: white;
     display: flex;
     justify-content: center;

@@ -16,6 +16,15 @@ hidden=0  //Status for STOP BUtton
 saveworklocal()
 workt=0 //IT is a variable to store data about work done in streaks
 //STREAK DATABASE
+streak=0
+let totalwork
+if(localStorage.getItem(totalwork)){
+totalwork=JSON.parse(localStorage.getItem('totalwork'))
+}
+else{
+    totalwork=0
+    localStorage.setItem('totalwork', JSON.stringify(totalwork))
+}
 weeklyexp=[0,0,0,0,0,0,0]
 weeklydone=[]
 getobdata()
@@ -210,6 +219,8 @@ function stopbutton(){
    console.log("END: ",end)
    work=(end-starut)*0.001 
    console.log("WORK", work)
+   totalwork=totalwork+work
+   
    console.log("Weekly Done Before null is ",weeklydone[da])
    if(weeklydone[da]=='null' || weeklydone[da]==undefined){
     weeklydone[da]=0
@@ -220,6 +231,7 @@ function stopbutton(){
    percent()
    workt=work
    chrome.storage.local.set({work}, function(){})       //SAVED TOTAL WORK 
+   localStorage.setItem('totalwork', JSON.stringify(totalwork))
    changestart()
    saveworklocal()
 }
@@ -284,6 +296,7 @@ function percent(){
   }
   localStorage.setItem('percentage', JSON.stringify(per));
   console.log("Percentage Calculated ")
+  streakcount()
   chrome.storage.local.set({per}, function() { 
   });
 }
@@ -291,3 +304,12 @@ streakv=document.getElementById("streakopen")
 streakv.addEventListener("click",function(){
   chrome.tabs.create({ url: 'streak.html' });
 })
+function streakcount(){
+    for(a=0; a<7; a++){
+        const percen = JSON.parse(localStorage.getItem('percentage'));
+        if(percen[a]>=50){
+            streak++
+        }
+    }
+    localStorage.setItem('streak', JSON.stringify(streak))
+}

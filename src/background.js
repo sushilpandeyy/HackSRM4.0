@@ -7,7 +7,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         });
         if(hidden==1){
     if (changeInfo.url) {
-      const bannedDomains = ["https://www.facebook.com","https://www.twitter.com", "https://www.instagram.com", "https://www.snapchat.com","https://www.tiktok.com","https://www.netflix.com","https://www.amazon.com/primevideo","https://www.hulu.com","https://store.steampowered.com"," https://www.epicgames.com/store","https://www.amazon.com","https://www.ebay.com"," https://www.walmart.com","https://www.bestbuy.com","https://www.reddit.com","https://www.discord.com","https://slack.com",,"https://www.pinterest.com","https://vimeo.com","https://www.expedia.com"," https://www.airbnb.com","https://www.swiggy.com","https://www.zomato.com","https://www.makemytrip.com","https://www.flipkart.com","https://www.goibibo.com","https://www.myntra.com ","https://www.ajio.com ","https://www.nykaa.com","https://www.buzzfeed.com","https://www.popsugar.com"];
+      const bannedDomains = ["facebook.com", "twitter.com", "instagram.com", "https://www.instagram.com/", "youtube.com"];
       currentDomain = extractDomain(changeInfo.url);
       // Check if the domain is in the banned list
       if (bannedDomains.includes(currentDomain)) {
