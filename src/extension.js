@@ -133,6 +133,7 @@ function update(){
           <li>
             <h4>Title:  ${tt[a]}</h4><p>Daily:  ${Math.floor(time[a]/60)} mins</p><p>Occurance:  ${occ[a]} </p><br><p>Today:  ${Math.floor(user[a]/60)} mins</p>
            </li> 
+           <br><br>
             `   
     }
   }
@@ -167,6 +168,7 @@ function tak(){
       link.value = currentdomain                    //UPDATING IN THE INPUT BOX
       console.log(currentdomain)
       let listfeat = ""
+      console.log("Links ",links[a])
       for(a=0; a<currenttask; a++){
         if(links[a]==currentdomain){
             taskid=a
@@ -176,9 +178,6 @@ function tak(){
            </li> 
             `   
           document.getElementById("feat").innerHTML=listfeat
-      }
-      else{
-        document.getElementById("acttabv").style.display="none"
       }
   }}) 
 //ADDING TIMER VIA START BUTTON
