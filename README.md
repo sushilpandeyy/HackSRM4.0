@@ -14,9 +14,9 @@ To install and deploy the DISS-TRACT web extension locally, follow these steps:
 4. Click on the "Load unpacked" or "Load extension" button and select the DISS-TRACT folder that you downloaded/cloned in step 1.
 5. The DISS-TRACT web extension should now be installed and ready to use.
 
-Track that is used : WEB3
+Track used : WEB3
 
-Technologies Uses : 
+Technologies Used : 
 1. HTML
 2. CSS
 3. JavaScript
@@ -38,7 +38,7 @@ Go to : chrome://extensions/
 
 
 
-Enable the Developers Mode fromm the top right corner:
+Enable the Developers Mode from the top right corner:
 ![Screenshot (83)](https://github.com/sushilpandeyy/HackSRM4.0/assets/116885079/f300473b-8a93-4511-a2a4-a70f5d2d6ce9)
 
 
