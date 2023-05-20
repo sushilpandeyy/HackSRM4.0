@@ -186,6 +186,8 @@ h4 {
 .title input {
   margin-left: 98px;
   border-radius: 6px;
+  width: 250px;
+  height: 40px;
 }
 
 .link {
@@ -196,6 +198,8 @@ h4 {
 .link input {
   margin-left: 102px;
   border-radius: 6px;
+  width: 250px;
+  height: 40px;
 }
 
 .description {
@@ -213,9 +217,11 @@ h4 {
   margin-top: 20px;
 }
 
-.TimeInterval input {
-  margin-left: 12px;
+.TimeInterval select {
+  margin-left: 102px;
   border-radius: 6px;
+  width: 250px;
+  height: 40px;
 }
 
 .Occurance {
@@ -223,9 +229,11 @@ h4 {
   margin-top: 20px;
 }
 
-.Occurance input {
-  margin-left: 35px;
+.Occurance select {
+  margin-left: 102px;
   border-radius: 6px;
+  width: 250px;
+  height: 40px;
 }
 
 .primaryButton{
@@ -334,3 +342,6 @@ transition: 0.2s ease-in;
 .coinContainer img{
   margin-right: 3px;
 }
+ ul{
+  list-style-type: none;
+ }

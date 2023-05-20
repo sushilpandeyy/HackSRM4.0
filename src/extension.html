@@ -16,29 +16,31 @@
             <div class="header top">
               <h1 class="title">Diss-Tract</h1>
             </div>
-            <div class="addIcon"><button id="addtask"><img src="res/add.png" alt="" /></button></div>
           </div>
 
     </header>
-
+<div id="acttabv">
     <div class="mainContainer">
       <div class="container activeTab">
         <div class="minActiveTab">
-          <h1>Active Tab</h1>
+          <h1>Active Task</h1>
         </div>
 
         <br />
         <ul id="feat">
         </ul>
-        <center><button class="normal" id="act">START</button></center>
-             <center><button class="hidden" id="actoff">STOP</button></center>
+        <center><button class="primaryButton" id="act">START</button></center>
+             <center><button class="primaryButton" id="actoff">STOP</button></center>
       </div>
     </div>
-  
+  </div>  
 <div id="addtaskboxhere"></div>
 <div id="addtaskbox">
     <div class="mainContainer">
       <div class="container">
+        <div class="minActiveTab">
+          <h1>Add Task</h1>
+        </div>
         <div class="title">
           <p class="names">Title:</p>
           <input type="text" id="title" placeholder="Title of task*" />
@@ -51,7 +53,7 @@
 
         <div class="TimeInterval">
           <p class="names">Time Interval:</p>
-          <select id="select"><option value="60">1 Mins</option><option value="900">15 Mins</option>
+          <select id="select"><option value="900">15 Mins</option>
             <option value="1800">30 Mins</option><option value="2700">45 Mins</option><option value="3600">1 Hrs</option>
             <option value="10800">3 Hrs</option><option value="21600">6 Hrs</option></select>
         </div>
@@ -61,7 +63,7 @@
           <select id="select2"><option value="daily">Daily</option><option value="Weekly">Weekly</option></select>
         </div>
 
-        <button class="primaryButton" id="save">Add Task</button>
+       <center><button class="primaryButton" id="save">Add Task</button></center> 
       </div>
     </div>
 </div>
@@ -69,6 +71,9 @@
     
 
     <div class="mainContainer">
+      <div class="minActiveTab">
+        <h1>All Task</h1>
+      </div>
       <ul class="list" id="tasklist">
       </ul>
     </div>

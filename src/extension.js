@@ -131,7 +131,7 @@ function update(){
       if(links[a]!=currentdomain){
       listItems += `
           <li>
-            <h4>${tt[a]}</h4><p>${time[a]}</p><p>${occ[a]}</p><br><p>Time Used: ${Math.floor(user[a]/60)} mins</p>
+            <h4>Title:  ${tt[a]}</h4><p>Daily:  ${Math.floor(time[a]/60)} mins</p><p>Occurance:  ${occ[a]} </p><br><p>Today:  ${Math.floor(user[a]/60)} mins</p>
            </li> 
             `   
     }
@@ -172,10 +172,13 @@ function tak(){
             taskid=a
           listfeat += `
           <li>
-            <h3>${tt[a]}</h3><p>${time[a]}</p><p>${occ[a]}</p><br><p>Time Spent: ${Math.floor(user[a]/60)} mins</p>
+            <h2>${tt[a]}</h2><br><br><p>This is a ${occ[a]} taks</p><p>Today Spent: ${Math.floor(user[a]/60)} mins</p>
            </li> 
             `   
           document.getElementById("feat").innerHTML=listfeat
+      }
+      else{
+        document.getElementById("acttabv").style.display="none"
       }
   }}) 
 //ADDING TIMER VIA START BUTTON
