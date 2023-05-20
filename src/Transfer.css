@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(45deg, rgb(92, 214, 255), rgb(153, 64, 255));
+}
+
+.transferContainer {
+    border: 2px solid black;
+    padding: 60px;
+    width: 390px;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    background-color: #000000c3;
+    border-radius: 10px;
+    box-shadow: 12px 9px rgba(30, 29, 29, 0.442);
+}
+
+.transferContainer input{
+    margin-left: 10px;
+    margin-top: 45px;
+    height: 30px;
+    width: 250px;
+    border-radius: 6px;
+}
+
+.primaryButton{
+    padding: 8px;
+    font-size: 13px;
+    margin: 40px 81px;
+    border-radius: 4px;
+    height: 40px;
+    width: 106px;
+    cursor: pointer;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    font-family: "Alata", sans-serif;
+  }
+  
+  .primaryButton:hover{
+  background-color: rgb(34, 34, 34);
+  color: rgba(251, 255, 255, 0.867);
+  transition: 0.2s ease-in;
+  }
+
+  .walletAddress{
+    color: white;
+    font-size: 30px;
+  }
+
+  .transferContainer img{
+    margin-left: 71px;
+  }

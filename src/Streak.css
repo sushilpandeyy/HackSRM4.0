@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(45deg, rgb(92, 214, 255), rgb(153, 64, 255));
+}
+
+.streakContainer {
+    border: 2px solid black;
+    padding: 60px;
+    width: 390px;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    background-color: #000000c3;
+    border-radius: 10px;
+    box-shadow: 12px 9px rgba(30, 29, 29, 0.442);
+}
+
+.streakMain {
+    border: 5px solid rgba(13, 255, 0, 0.867);
+    color: rgb(20, 35, 101);
+    background-image: linear-gradient(45deg, rgb(92, 214, 255), rgb(153, 64, 255));
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    margin: 20px auto;
+    font-size: 30px;
+    font-family: "Oswald", sans-serif;
+}
+
+.streakMain h1 {
+    justify-content: center;
+    margin: auto;
+}
+
+.noOfDays {
+    display: flex;
+    padding: 20px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.weekDays {
+    padding: 9px;
+    height: 36px;
+    width: 63px;
+    border: 2px solid rgba(243, 254, 255, 0.867);
+    border-radius: 50%;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    color: rgba(243, 254, 255, 0.867);
+    background-color: #0C134F;
+    font-family: "Alata", sans-serif;
+}
+
+.descBox {
+    border: 2px solid rgba(13, 255, 0, 0.867);
+    border-radius: 13px;
+    padding: 15px;
+    background-image: linear-gradient(45deg, rgb(92, 214, 255), rgb(153, 64, 255));
+    color: rgb(20, 35, 101);
+    font-family: "Alata", sans-serif;
+    font-weight: 600;
+    height: 200px;
+    font-size: 12px;
+}
+
+.coinContainer {
+    height: 30px;
+    width: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-left: 230px;
+    position: inherit;
+    margin-top: -35px;
+}
+
+.coinContainer img {
+    margin-right: 6px;
+}
